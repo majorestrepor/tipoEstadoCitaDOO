@@ -1,4 +1,4 @@
-package DTO;
+package co.edu.uco.DTO;
 
 public class EstadoCitaDTO {
     String id;

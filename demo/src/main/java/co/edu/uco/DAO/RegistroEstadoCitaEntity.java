@@ -1,4 +1,4 @@
-package DAO;
+package co.edu.uco.DAO;
 
 public class RegistroEstadoCitaEntity {
     String idCita;

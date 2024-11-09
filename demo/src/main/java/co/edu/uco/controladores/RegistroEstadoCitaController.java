@@ -1,9 +1,9 @@
-package controladores;
+package co.edu.uco.controladores;
 
-import DAO.RegistroEstadoCitaEntity;
-import DTO.RegistroEstadoCitaDTO;
+import co.edu.uco.DAO.RegistroEstadoCitaEntity;
+import co.edu.uco.DTO.RegistroEstadoCitaDTO;
 import org.springframework.web.bind.annotation.*;
-import utilidades.mappers.RegistroEstadoCitaMapper;
+import co.edu.uco.utilidades.mappers.RegistroEstadoCitaMapper;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;

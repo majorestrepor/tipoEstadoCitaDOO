@@ -1,7 +1,7 @@
-package utilidades.mappers;
+package co.edu.uco.utilidades.mappers;
 
-import DAO.RegistroEstadoCitaEntity;
-import DTO.RegistroEstadoCitaDTO;
+import co.edu.uco.DAO.RegistroEstadoCitaEntity;
+import co.edu.uco.DTO.RegistroEstadoCitaDTO;
 
 import java.util.UUID;
 
