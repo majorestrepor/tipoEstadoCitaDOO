@@ -1,14 +1,15 @@
 package co.edu.uco.DAO;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 public class RegistroEstadoCitaEntity {
     private String idCita;
     private String idEstado;
     private String Id;
-    private LocalDate fechaRegistro;
+    private LocalDateTime fechaRegistro;
 
-    public RegistroEstadoCitaEntity(String idEstado, String idCita, String id, LocalDate fechaRegistro) {
+    public RegistroEstadoCitaEntity(String idEstado, String idCita, String id, LocalDateTime fechaRegistro) {
         setIdEstado(idEstado);
         setIdCita(idCita);
         setId(id);
@@ -39,11 +40,11 @@ public class RegistroEstadoCitaEntity {
         Id = id;
     }
 
-    public LocalDate getFechaRegistro() {
+    public LocalDateTime getFechaRegistro() {
         return fechaRegistro;
     }
 
-    private void setFechaRegistro(LocalDate fechaRegistro) {
+    private void setFechaRegistro(LocalDateTime fechaRegistro) {
         this.fechaRegistro = fechaRegistro;
     }
 }

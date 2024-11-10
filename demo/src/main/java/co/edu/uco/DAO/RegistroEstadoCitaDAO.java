@@ -1,9 +1,6 @@
 package co.edu.uco.DAO;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 public class RegistroEstadoCitaDAO {
     private Connection conn;
@@ -13,15 +10,15 @@ public class RegistroEstadoCitaDAO {
         stmt = conn.createStatement();
     }
     public void crear(RegistroEstadoCitaEntity entity) throws SQLException{
-        ResultSet rs = stmt.executeQuery("SELECT * FROM agenda.Paciente");
-        // Procesar los resultados
-        while (rs.next()) {
-            String id = rs.getString("id");
-            String nombre = rs.getString("nombre");
-            String direccion = rs.getString("direccion");
-            String telefono = rs.getString("telefono");
-
-            System.out.printf("ID: %s, Nombre: %s, Dirección: %s, Teléfono: %s%n", id, nombre, direccion, telefono);
+        String sql = "INSERT INTO agenda.registroestadocita (id, cita_id, tipo_estado_id, fecha_registro) VALUES (?, ?, ?, ?)";
+        PreparedStatement pstmt = conn.prepareStatement(sql);
+        pstmt.setString(1, entity.getId());
+        pstmt.setString(2, entity.getIdCita());
+        pstmt.setString(3, entity.getIdEstado());
+        pstmt.setTimestamp(4, Timestamp.valueOf(entity.getFechaRegistro()));
+        int filasInsertadas = pstmt.executeUpdate();
+        if (filasInsertadas > 0) {
+            System.out.println("Registro insertado exitosamente en la tabla registro_estado_cita.");
         }
     }
 }

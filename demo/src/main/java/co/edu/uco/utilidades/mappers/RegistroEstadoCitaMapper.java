@@ -4,6 +4,7 @@ import co.edu.uco.DAO.RegistroEstadoCitaEntity;
 import co.edu.uco.DTO.RegistroEstadoCitaDTO;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 public class RegistroEstadoCitaMapper {
@@ -15,7 +16,7 @@ public class RegistroEstadoCitaMapper {
                 dto.getIdEstado(),
                 dto.getIdCita(),
                 UUID.randomUUID().toString(),
-                LocalDate.now()
+                LocalDateTime.now()
         );
         return entity;
     }
