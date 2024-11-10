@@ -10,7 +10,7 @@ public class RegistroEstadoCitaController {
 
     private final ServicioRegistroEstadoCita servicioRegistroEstadoCita;
 
-    public RegistroEstadoCitaController() {
+    public RegistroEstadoCitaController() throws SQLException {
         servicioRegistroEstadoCita = new ServicioRegistroEstadoCita();
     }
 
