@@ -1,4 +1,7 @@
-package co.edu.uco.DAO;
+package co.edu.uco.DAO.postgres;
+
+import co.edu.uco.DAO.DatabaseConnection;
+import co.edu.uco.DAO.RegistroEstadoCitaEntity;
 
 import java.sql.*;
 
