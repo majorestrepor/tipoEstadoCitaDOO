@@ -7,9 +7,9 @@ public class DatabaseConnection {
     private static Connection connection = null;
 
     // Configuración de la conexión
-    private static final String URL = "jdbc:postgresql://localhost:1234/postgres"; // Cambia el puerto, host y base de datos según sea necesario
-    private static final String USER = "postgres"; // Reemplaza con tu usuario de PostgreSQL
-    private static final String PASSWORD = "majorera20"; // Reemplaza con tu contraseña
+    private static final String URL = "jdbc:postgresql://autorack.proxy.rlwy.net:56055/railway";
+    private static final String USER = "postgres";
+    private static final String PASSWORD = "tBalNSDvxhMcpCawMiflbDnabnwdNfXV";
 
     // Constructor privado para evitar instanciación
     private DatabaseConnection() {}
