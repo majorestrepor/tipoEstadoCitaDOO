@@ -18,7 +18,7 @@ public class TipoEstadoCitaDAO {
 
     public ArrayList<TipoEstadoCitaEntity> obtenerTodosLosEstados() throws SQLException {
         ArrayList<TipoEstadoCitaEntity> tipoEstadoCitas = new ArrayList<TipoEstadoCitaEntity>();
-        String sql = "SELECT * FROM agenda.tipoestadocita";
+        String sql = "SELECT * FROM tipoestadocita";
         PreparedStatement pstmt = conn.prepareStatement(sql);
         ResultSet rs = pstmt.executeQuery();
         while (rs.next()) {

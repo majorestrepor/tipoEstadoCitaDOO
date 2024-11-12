@@ -13,9 +13,9 @@ public class RegistroEstadoCitaMapper {
             return null;
         }
         RegistroEstadoCitaEntity entity = new RegistroEstadoCitaEntity(
-                dto.getIdEstado(),
-                dto.getIdCita(),
-                UUID.randomUUID().toString(),
+                UUID.fromString(dto.getIdEstado()),
+                UUID.fromString(dto.getIdCita()),
+                UUID.randomUUID(),
                 LocalDateTime.now()
         );
         return entity;

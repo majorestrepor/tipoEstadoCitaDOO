@@ -13,11 +13,11 @@ public class RegistroEstadoCitaDAO {
         stmt = conn.createStatement();
     }
     public void crear(RegistroEstadoCitaEntity entity) throws SQLException{
-        String sql = "INSERT INTO agenda.registroestadocita (id, cita_id, tipo_estado_id, fecha_registro) VALUES (?, ?, ?, ?)";
+        String sql = "INSERT INTO registroestadocita (id, cita_id, tipo_estado_id, fecha_registro) VALUES (?, ?, ?, ?)";
         PreparedStatement pstmt = conn.prepareStatement(sql);
-        pstmt.setString(1, entity.getId());
-        pstmt.setString(2, entity.getIdCita());
-        pstmt.setString(3, entity.getIdEstado());
+        pstmt.setObject(1, entity.getId());
+        pstmt.setObject(2, entity.getIdCita());
+        pstmt.setObject(3, entity.getIdEstado());
         pstmt.setTimestamp(4, Timestamp.valueOf(entity.getFechaRegistro()));
         int filasInsertadas = pstmt.executeUpdate();
         if (filasInsertadas > 0) {
